@@ -10,9 +10,13 @@ This particular code example is optimized to work with the **RDK3** platform. Si
 
 ## Requirements
 
-- [ModusToolbox® software](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/) v3.x
+- [ModusToolbox® software](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/) **v3.x** [built with **v3.1**]
 - The RDK3 development kit must be provisioned before use.
 - The RDK4 development kit must be powered from BATTERY terminals with a 12V power supply.
+
+## Supported toolchains (make variable 'TOOLCHAIN')
+
+- GNU Arm&reg; Embedded Compiler v11.3.1 (`GCC_ARM`) - Default value of `TOOLCHAIN`
 
 ## Using the code example
 
