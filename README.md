@@ -2,23 +2,23 @@
 
 This is a universal code example that enables the UM980 to communicate with a host PC over the USB. The Rutronik Development Kits [RDK2](https://github.com/RutronikSystemSolutions/RDK2_Documents), [RDK3](https://github.com/RutronikSystemSolutions/RDK3_Documents), or [RDK4](https://github.com/RutronikSystemSolutions/RDK4_Documents) may be used for this purpose together with the Rutronik Adapter Board the [RAB4-RTK](https://github.com/RutronikSystemSolutions/RAB_RTK_Hardware_Files), and [UPrecise](https://en.unicorecomm.com/download?id=4#tab) software provided by Unicore Communications Inc.
 
-This particular code example is optimized to work with the **RDK3** platform. Since it acts as a USB UART Bridge, any software on a host side can be used to read the measurements or send the commands to any device that is interfaced with Arduino UART and communicates at 115200 bit/s of baud rate.
+This particular code example is optimised to work with the **RDK3** platform. Since it acts as a USB UART Bridge, any software on the host side can be used to read the measurements or send the commands to any device that is interfaced with Arduino UART and communicates at a 115200 bit/s of baud rate.
 
  <img src="images/UM980_with_RDKs.jpg" style="zoom:70%;" />
 
 
 
+## **NOTICE**
+
+**Infineon has discontinued the PSOC™ 64 Secured MCU product line. As a result, the CYB06447BZI-BLD53 MCU used in the RDK3 is not recommended for new designs. The Infineon CY8C6347BZI-BLD53 MCU may be considered a suitable alternative.**
+
 ## Requirements
 
-- [ModusToolbox® software](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/) **v3.x** [built with **v3.1**]
+- [ModusToolbox® software](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/) **v2025.4.0** [built with **v3.1**]
 - The RDK3 development kit must be provisioned before use.
 - The RDK4 development kit must be powered from BATTERY terminals with a 12V power supply.
 
-- [ModusToolbox® software](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/) **v3.2**: 
-
-1. The [Python](https://www.python.org/) has to be installed manually on Windows OS.
-2. Make sure the Python installation is added to the path variable. 
-3. Use this command to install the [cysecuretools](https://pypi.org/project/cysecuretools/) package:
+- The [Python](https://www.python.org/) has to be installed manually on Windows OS. Make sure the Python installation is added to the path variable. Use this command to install the [cysecuretools](https://pypi.org/project/cysecuretools/) package:
 
 ```
 pip install cysecuretools
@@ -65,11 +65,11 @@ For more details, see the [Eclipse IDE for ModusToolbox&trade; software user gui
 
 - Connect the PC to your RDK’s USB KitProg3 terminal.
 
-- Programm the firmware.
+- Program the firmware.
 
 - Load the UPrecise software.
 
-  All the new UM980 modules do not send any NMEA information to the UART interface by default. To enable the NMEA sentences please send the commands as shown below:
+  All the new UM980 modules do not send any NMEA information to the UART interface by default. To enable the NMEA sentences, please send the commands as shown below:
 
   ```
   GNGGA 1
